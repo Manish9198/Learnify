@@ -10,20 +10,20 @@ Learnify/
 ├── .gitignore
 ├── README.md
 ```
+---
 ## Prerequisites
 Ensure the following are installed on your system:
 - Node.js (v18 or higher)
 - MongoDB (Local installation or MongoDB Atlas)
 - Git
 
-
+---
 ## Getting Started
 ### Step 1: Clone the Repository
 ```
 git clone https://github.com/Manish9198/Learnify.git
 cd Learnify
 ```
-
 ## Backend Setup (Server)
 ### Step 2: Install Dependencies
 ```
@@ -119,6 +119,7 @@ cd frontend
 npm run dev
 ```
 Features
+```
 User authentication using JWT
 Role-based access (User / Admin)
 Course browsing and secure purchase
@@ -139,8 +140,7 @@ Confirm .env keys have no spaces
 Frontend Cannot Reach Backend
 Ensure backend is running on port 5000
 Verify API base URL configuration
-Git Ignore Policy
-
+```
 ---
 The following files and folders are intentionally excluded:
 
@@ -157,4 +157,5 @@ Manish Sutar
 
 License
 This project is licensed for educational and learning purposes.
+
 
