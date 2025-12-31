@@ -1,0 +1,6 @@
+frontend/src/assets
+server/Uploads/
+node_modules/
+.env
+dist/
+build/

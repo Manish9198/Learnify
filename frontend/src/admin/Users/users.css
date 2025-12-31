@@ -1,0 +1,79 @@
+.users {
+  max-width: 1000px;
+  width: 100%;
+  padding-top: 50px; /* header safe space */
+  min-height: 100vh;
+  background-color:transparent;
+  margin: 0 auto; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 120px 10px 10px 250px;
+  /* justify-content: center; */
+} 
+
+
+
+.users h1 {
+  margin-bottom: 20px;
+  color: #8a4baf;
+  font-size: 24px;
+}
+
+/* Table wrapper for responsiveness */
+.users table {
+  width: 90%;
+  max-width: 1000px;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  /* margin: 0 auto; */
+}
+
+/* Table header */
+.users thead {
+  background-color: #8a4baf;
+  color: white;
+}
+
+.users thead td {
+  padding: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Table body */
+.users tbody td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+}
+
+/* Zebra rows */
+.users tbody tr:nth-child(even) {
+  background-color: #f9f7fb;
+}
+
+/* Hover effect */
+.users tbody tr:hover {
+  background-color: #f1ebf7;
+}
+
+/* Button */
+.common-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #8a4baf;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 0.3s ease;
+}
+
+.common-btn:hover {
+  background-color: #6f3b94;
+}

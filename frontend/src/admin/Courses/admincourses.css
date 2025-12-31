@@ -1,0 +1,156 @@
+/* ADMIN COURSES LAYOUT */
+.admin-courses {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+
+  padding-top: 40px;    
+  padding-bottom: 120px;
+  padding-right: 360px;   /*reserve space for fixed sidebar */
+
+  min-height: 100vh;
+  background-color: #f5f5f5;
+
+  /* left section */
+  .left {
+    flex: 2;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 3%;
+    padding-left: 150px;
+
+    h1 {
+      color: #8a4baf;
+      margin-bottom: 20px;
+    }
+
+    .dashboard-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: flex-start;
+    }
+  }
+
+ /* right section */
+  .right {
+    position: fixed;      
+    top: 80px;        
+    right: 3%;
+
+    width: 320px;
+    z-index: 10;
+
+    .course-form {
+      background-color: #fff;
+      padding: 18px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+
+      width: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
+      text-align: center;
+
+      h2 {
+        font-size: 20px;
+        color: #8a4baf;
+        margin-bottom: 8px;
+      }
+
+      form {
+        text-align: left;
+
+        label {
+          display: block;
+          margin-bottom: 3px;
+          font-size: 13px;
+          color: #333;
+        }
+
+        input,
+        select {
+          width: 100%;
+          padding: 7px;
+          margin-bottom: 8px;
+          font-size: 13px;
+
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          box-sizing: border-box;
+        }
+
+        input[type="file"] {
+          padding: 4px;
+        }
+
+        img {
+          width: 40;
+          max-height: 30px;
+          object-fit: cover;
+          border-radius: 6px;
+          margin-bottom: 8px;
+        }
+
+        .common-btn {
+          width: 100%;
+          padding: 10px;
+          background-color: #8a4baf;
+          color: white;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #6f3b94;
+          }
+        }
+      }
+    }
+  }
+
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+    padding-right: 10px; /*remove reserved space */
+
+    .left {
+      max-width: 100%;
+      margin: 0;
+    }
+
+    .right {
+      position: static; /* disable fixed on mobile */
+      width: 90%;
+      margin-top: 20px;
+      margin-left: 40px;
+    }
+  }
+}
+
+.left h1 {
+  text-align: center;
+}
+
+
+.file-preview {
+  display: flex;          
+  align-items: center;
+  gap: 10px;
+}
+
+.file-preview input[type="file"] {
+  flex: 1;
+}
+
+.file-preview img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+

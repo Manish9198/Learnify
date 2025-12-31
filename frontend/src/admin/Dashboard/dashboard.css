@@ -1,0 +1,38 @@
+.main-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto; 
+  margin-left: 100px;          
+  margin-top: 80px;      
+
+  .box {
+    background-color: #8a4baf;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #432456;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    justify-content: center;
+    margin-left: 100px;          
+    margin-top: 80px; 
+
+    .box {
+      width: 70%;          /* stack boxes */
+      max-width: 100px;
+    }
+  }
+}
