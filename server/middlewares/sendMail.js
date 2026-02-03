@@ -2,7 +2,7 @@ import { createTransport } from "nodemailer";
 import dotenv from "dotenv";
 dotenv.config();
 
-const sendMail = async (email, subject, data) => {
+export const sendMail = async (email, subject, data) => {
   const transport = createTransport({
     host: "smtp.gmail.com",
     port: 587,
@@ -67,8 +67,6 @@ const sendMail = async (email, subject, data) => {
     html,
   });
 };
-
-export default sendMail;
 
 export const sendForgotMail = async (subject, data) => {
   const transport = createTransport({
