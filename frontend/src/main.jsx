@@ -7,7 +7,7 @@ import { CourseContextProvider } from "./context/CourseContext.jsx";
 export const server = "http://localhost:5000";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+  <React.StrictMode>    //for highlighting potential problems in the application ,for devlopment only
     <UserContextProvider>
       <CourseContextProvider>
         <App />
