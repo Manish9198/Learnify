@@ -26,7 +26,7 @@ export const fetchLectures = TryCatch(async (req, res) => {
   const lectures = await Lecture.find({ course: req.params.id });
 
   const user = await User.findById(req.user._id);
-
+  
   if (user.role === "admin") {
     return res.json({ lectures });
   }
@@ -65,8 +65,8 @@ export const getMyCourses = TryCatch(async (req, res) => {
 });
 
 export const checkout = TryCatch(async (req, res) => {
-  const user = await User.findById(req.user._id);
-  const course = await Courses.findById(req.params.id);
+  const user = await User.findById(req.user._id);    // yha req ke andar jo middleware wala data he, remember req.user=decoded
+  const course = await Courses.findById(req.params.id); // courseid req url ka part he isliye params liya
   
   if (!course) {
     return res.status(404).json({ message: "Course not found" });
