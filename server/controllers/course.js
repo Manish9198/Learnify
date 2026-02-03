@@ -84,6 +84,11 @@ export const checkout = TryCatch(async (req, res) => {
     receipt: `receipt_${Date.now()}`,
   };
 
+  // export const instance = new Razorpay({
+    //   key_id: process.env.Razorpay_Key,
+    //   key_secret: process.env.Razorpay_Secret,   // ye already index.js me he ise uncomment na kre ,samajhne ke liye
+    // });
+    
   const order = await instance.orders.create(options);
 
   res.status(201).json({
